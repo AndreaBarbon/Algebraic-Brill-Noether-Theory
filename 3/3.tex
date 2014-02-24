@@ -22,7 +22,7 @@ Then we introduce the concept of Fitting ideals, which is at the heart of this t
 As a consequence of our definitions, it will be possible to exploit a Theorem on the height of Fitting ideals, proved by Eagon and Northcott, to give a lower bound to the dimension of the moduli varieties \moduu in terms of the \BN number $\rho$. \\
 Next we will introduce the variety $G_d^r$ parametrizing (not necessarily complete) linear series which, in the following Section, will permit to achieve a completely cohomological description of the tangent spaces of \modu, in which the Petri's map 
 $$ \mu_0: H^0(D)\otimes H^0(K-D) \tolong H^0(K) $$ 
-will turn out to play a crucial role. Relying on this description we will be able to characterize the smoothness of the moduli varieties.
+will turn out to play a crucial role. Relying on this description we will be able to characterize the singularities of the moduli varieties.
 
 
 \section{Fitting ideals and degeneracy loci}\label{sec:fitt_deg}
@@ -116,7 +116,7 @@ will turn out to play a crucial role. Relying on this description we will be abl
 		$$ 0 \to \phi_*L\otimes F  \to \phi_* L(\Gamma')\otimes F \to \phi_* (L(\Gamma') / L)\otimes F  \to R^1 \phi_* L\otimes F  \to 0 $$ 
 	\end{lemm}
 	\begin{rema}
-		Before starting with the proof let us remark that, given a family of line bundles $L$ as in the above statement, we have an exact sequence which is very similar to \eqref{eq:univ_lb_direct_image}. Indeed, since $\Gamma'$ is the pullback of a divisor of high degree on $X$, Lemma \ref{lemm:trivial_R1} implies $R^1\phi_* L(\Gamma') = 0$. Therefore, considering the natural \ses 
+		Before starting with the proof let us remark that, given a family of line bundles $L$ as in the above statement, we have an exact sequence which is very similar to \eqref{eq:univ_lb_direct_image}. Indeed, since $\Gamma'$ is the pullback of a divisor of high degree on $X$, Lemma \ref{lemm:trivial_R1} of Appendix A implies $R^1\phi_* L(\Gamma') = 0$. Therefore, considering the \ses 
 		$$ \SES{L}{L(\Gamma')}{L(\Gamma')/L} $$
 		and taking the direct image through $\phi$ we obtain the exact sequence
 		$$ 0 \to \phi_*L  \to \phi_* L(\Gamma') \to \phi_* (L(\Gamma') / L)  \to R^1 \phi_* L  \to 0\;. $$
@@ -127,7 +127,7 @@ will turn out to play a crucial role. Relying on this description we will be abl
 			\item $\nu_{*} \scL(\Gamma)$ is locally free, as showed in Proposition \ref{prop:free_pres}
 			\item $R^i \nu_{*} \scL(\Gamma) = 0$ for every $i\geq 1$, as proven in Lemma \ref{lemm:trivial_R1}
 		\end{itemize}
-		Hence we can apply Proposition \ref{prop:R1_trick} to the base change diagram
+		Hence we can apply Proposition \ref{prop:R1_trick} of Appendix A to the base change diagram
 		$$
 		\begin{tikzpicture}[node distance=5em, auto]
 			\node (A) 															{$X\times T$};
@@ -205,7 +205,7 @@ will turn out to play a crucial role. Relying on this description we will be abl
 		$$ f: D \into \Dd \AND g: \calO(D)\into \Pd $$
 		satisfy the relation $g = u\circ f$. So fiberwise we have the identities
 		$$ (u^* \scL)_{\mid D} = f^* u^* \scL = (u\circ f)^* \scL = g^* \scL = \calO(D) = \calO(f^* \Delta) = f^*\calO(\Delta) = \calO(\Delta)_{\mid D} $$
-		and we can therefore apply Lemma \ref{lemm:square} to get a line bundle $F$ over $\Dd$ such that
+		and we can therefore apply Lemma \ref{lemm:square} of Appendix A to get a line bundle $F$ over $\Dd$ such that
 		$$ u^* \scL \;\cong\; \calO(\Delta) \otimes \pi^* F \,, $$
 		where $\pi: X\times \Dd \to \Dd$ is the natural projection map. Finally, from Corollary \ref{coro:functoriality} we get a natural isomorphism
 		$$ u^*  R^1\nu_{*}\scL \;\cong\; R^1\pi_*\calO(\Delta)\otimes F $$
@@ -257,7 +257,7 @@ will turn out to play a crucial role. Relying on this description we will be abl
 	\vspace{1em}
 	Let now $G$ be a finitely presented sheaf which admits the free presentation
 	$$ E\overset{\ph}\to F \to G\to 0 $$
-	with $E$ of rank $e$ and $F$ of rank $f$. Applying Theorem \ref{thm:height} to $G$ we get the inequality
+	with $E$ of rank $e$ and $F$ of rank $f$. Applying Theorem \ref{thm:height} of Appendix A to $G$ we get
 	$$ \height (\Fitt_t(G)) \leq (e-f+t+1)(t+1). $$
 	In the case of $\Xdr$, the sheaves appearing in the presentation \eqref{eq:univ_div_seq} have rank $d$ and $g$ as in \eqref{eq:e_f_k}. Hence, denoting by $I$ the (Fitting) ideal sheaf of $\Xdr$ we have
 	$$ \height (I) \leq r(g-d+r). $$
@@ -375,6 +375,9 @@ will turn out to play a crucial role. Relying on this description we will be abl
 
 \section{Consequences of the infinitesimal study}
 
+	The results achieved in this Section shade light on the crucial role of the cup-product homomorphism $\mu_0$ in the study of the geometry of linear series. Indeed, as we will see in the following, the moduli varieties parametrizing effective divisors and linear series present singularities on those points over which the cup-product presents a non trivial kernel. This is a fact which was already observed in the toy-model examples of Section \ref{sec:examples}.
+	\\
+
 	We start with a proposition about the dimension of $\Gdr$. 
 	\begin{prop}\label{prop:inf_Gdr}
 		The dimension of $\Gdr$ is at least $\rho$ and, at every point $w=(L,W)$,  
@@ -420,9 +423,20 @@ will turn out to play a crucial role. Relying on this description we will be abl
 			\end{eqnarray*}
 			The remark about the smoothness of $\Xdr$ at $D$ follows from the above combined with the lower bound of Theorem \ref{thm:lowerbounds}.
 	\end{proof}
-	{\color{Blue}
-		This would be a good place to say something on the classical results about the injectivity of $\mu_0$ for a general curve.
-	}
+
+	These results make it natural to ask how the tangent spaces of the moduli varieties behave in the case of a general curve. An answer is given by a classical result due to Gieseker, which was proved during the last decades for the case of curves over $\C$. 
+	\begin{namedtheo}[Smoothness Theorem]
+		Let $X$ be a general curve of genus $g$ and let $d\geq 1$, $r\geq 0$ be natural numbers. Then $\Gdr$ is smooth of dimension $\rho$.
+	\end{namedtheo} 
+	An extension of this Theorem to an arbitrary algebraically closed field is out of the scope of this Thesis, nevertheless the above achieved results strongly suggest that such a generalization is possible.\\
+	Because of the cohomological description of the infinitesimal structure of the moduli varieties, the Smoothness Theorem can also be stated in an equivalent and purely cohomological manner:
+	\begin{namedtheo}[Smoothness Theorem 2]
+		Let $X$ be a general curve of genus $g$ and $D$ and effective divisor on $X$. Then the cup-product homomorphism
+		$$ \mu_{0} : H^0(D)\otimes H^0(K-D) \to H^0(K) $$
+		is injective.
+	\end{namedtheo}
+
+
 	\begin{comment}
 		It would nice to show that at \textbf{bad} points the tangent cones are given by
 		$$ T_D\Xdr \cong T_D\Dd \AND T_L\Wdr \cong T_L\Pd $$
