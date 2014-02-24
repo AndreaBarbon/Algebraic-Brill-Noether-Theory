@@ -1,0 +1,192 @@
+
+	Consider a divisor $D$ of degree $d<g$ and let $\w\in H^0(K)$ such that the corresponding hyperplane $H_{\w}$ cuts $X$ on the support of $D$ and $D'$. This in particular implies that $\w$ actually belongs to $H^0(K-D-D')$, since it vanishes on the points of $D$ and $D'$. As noticed above, a non-constant global section $f\in H^0(D)$ can be geometrically interpreted as a transformation \emph{moving} the hyperplane $H_{\w}$ to $H_{f\w}$, and this intuition can be formalized by means of the cup-product
+	$$ \mu_0: H^0(D)\otimes H^0(K-D) \tolong H^0(K) $$
+	which is also know as the \textbf{Petri's map} and, as we will see in Chapter \ref{chap:moduli}, plays a fundamental role in the linear approximation of the varieties \moduu parametrizing linear series.\\
+
+	$$ \dots $$
+
+	Now the crucial observation is that, since $f$ has poles controlled by $D$, the differential $f\cdot \w$ keeps vanishing on $D'$ and thus the corresponding $H_{f\w}$ still passes through the points of $D'$. Therefore we understand that the integer $r(D)$, i.e.\ the projective dimension of $H^0(D)$, equals the dimension of the space of hyperplanes passing through $D'$ and, further, we claim that this is what the \RR Theorem is telling us!\\
+	In fact, one can rewrite the \RR formula \eqref{eq:RR} in the equivalent form
+	$$ r(D) = g-1 \; - \; (d'-r(D')) $$
+	and observe that $g-1$ is nothing but the dimension of the projective space $\PP^{g-1}$ in which $X$ is canonically embedded. Therefore we see that $(d'-r(D'))$ equals the number of linearly independent points of the support of $D'$ and, consequently, that the integer $r(D')$ represents the number of independent linear relations among these points.\\
+	On the next page, Figure \ref{fig:Example} presents an example of a $g_1^3$ while Figure \ref{fig:Example2} shows a trivial linear series, both in the context of the canonical embedding of a curve of genus $4$. These pictures may help the reader visualizing the geometrical meaning of $r(D)$.\\
+
+
+
+
+
+
+
+Institutional Investors -> Banks, HF, mutual Funds
+
+Retail -> Private investors
+
+
+
+Price-to-earnings ratio is calculated by taking Apple’s last price and dividing it by their earnings per share. In this case, Apple’s last quarter earnings per share were $44.14. With a price of $519.33, their P/E ratio is $11.82.
+
+A higher P/E ratio tends to mean that a company’s stock price is relatively expensive. A lower P/E ratio means the price is relatively inexpensive.
+
+Takeaway: The key word here is relatively. P/E ratio is useless on its own; it always needs to be compared, either to other companies of similar size, the industry the company's in or to past performances of the same company.
+
+
+
+\section{Cohomology}
+
+	The \RR Theorem is stated in terms of the dimension of the vector spaces $H^0(D)$ and $H^0(D')$, which arise as degree-$0$ sheaf cohomology groups of the line bundles $\OXD$ and $\OX(D')$. The relationship between the Theorem and linear series is therefore well understood by means of the above mentioned canonical isomorphism
+	$$ \PP H^0(D) \;\cong\; |D| $$
+	which identifies the complete linear series of $D$ with the projectification of the space of global sections of $\OXD$. Therefore, using the standard notation $r(D):= \dim|D| $ for the dimension of $|D|$, we can rewrite the \RR formula as
+	\begin{equation}\label{eq:RR}
+		r(D') - r(D) = d'-g+1
+	\end{equation}
+	thus making it clear that it can be interpreted as a statement on the dimension spread between a linear series and its residual.\\
+
+	Moreover, sheaf cohomology can be exploited to fully describe the \AJJ map, thus it plays a crucial role in the study of linear series. In fact, as we will show in Chapter \ref{chap:relative_Pic_and_Div}, we have isomorphisms
+	$$ T_D \Dd \cong H^0(D)_D \AND T_{\OXD}\Pd \cong H^1(\OX) $$
+	expressing the tangent spaces of $\Xd$ and $\Pd$ as cohomology groups, where $H^0(D)_D$ is a short-hand notation for $H^0(X,\,\OXD\otimes\calO_D)$, i.e.\ the space of global sections of $\OXD$ restricted to the divisor $D$ itself.
+	Further, under these isomorphisms, the coboundary map appearing in the long exact cohomology sequence associated to $D$ can be identified with the tangent map of $u$. More precisely, we have the commutative diagram
+	\begin{equation}\label{eq:local_diagram_1}
+	\begin{tikzpicture}[node distance=5em, auto]
+		\node (O) 									{$0$};
+		\node (A) 	[right of=O]		{$H^0(D)/k$};
+		\node (B) 	[right of=A, xshift=2em]		{$H^0(D)_D$};
+	  \node (C) 	[right of=B, xshift=4em] 		{$H^1(\OX)$};
+	  \node (D) 	[right of=C, xshift=2em] 		{$H^1(D)$};
+	  \node (OO) 	[right of=D] 		{$0$};
+	  \node (O') 	[below of=O] 		{$0$};
+		\node (A') 	[below of=A] 		{$ T_D |D|$};
+	  \node (B') 	[below of=B] 		{$ T_D \Dd$};
+	  \node (C') 	[below of=C] 		{$ T_{\OXD} \Pd $};
+	  \node (D') 	[below of=D] 		{$\;$};
+		\draw[-stealth] 				(O)		to node {} (A);
+	  \draw[-stealth]					(A)		to node {} (B);
+	  \draw[-stealth]					(B)		to node {$\delta_D$} (C);
+	  \draw[-stealth]					(C)		to node {} (D);
+		\draw[-stealth]					(D)		to node {} (OO);
+		\draw[-stealth] 				(O')	to node {} (A');
+	  \draw[-stealth]					(A')	to node {} (B');	  
+	  \draw[-stealth]					(B')	to node {$T_D u$} (C');
+	  \draw[-stealth][swap]		(A)		to node {$\cong$} (A');
+	  \draw[-stealth][swap]		(B)		to node {$\cong$} (B');
+	  \draw[-stealth]					(C)		to node {$\cong$} (C');
+	\end{tikzpicture}
+	\end{equation}	
+	with exact rows, which thus includes the statement of the Abel's Theorem as well. Indeed, the exactness of the bottom row implies that $T_D|D|$ is the kernel of $T_D u$ and that, therefore, the \AJJ map is constant over the complete linear series $|D|$.
+
+
+
+
+
+
+
+@book{LAZAR,
+	Author = {R.K. Lazarsfeld},
+	Date-Added = {2014-01-16 11:46:43 +0100},
+	Date-Modified = {2014-01-16 15:17:52 +0000},
+	Publisher = {Springer},
+	Title = {Positivity in Algebraic Geometry},
+	Year = {2004}
+	}
+	
+
+
+
+
+Now, notice that $\OX(Q)$ is ample being of positive degree, so $\OX(Q)^{\otimes N}$ is very ample and there are sections $s_0,\dots, s_r$ embedding $X$ into $\PP^r$. We can obtain $(r+1)^n$ sections by considering
+		$$ \bigotimes_{i=1}^n \, \pi_i^* s_{f(i)} \quad \text{ for every map } \quad f:\set{1,\dots, n}\to \set{0,\dots, r} $$
+		These give an embedding of $X^n$, showing that $\zeta^* \calO_{X_n}([Q])$ and hence $\calO_{X_n}([Q])$ is ample, as desired.
+
+
+
+\section{Representable functors }
+	We sahould (maybe) recall here what representability means, and the relation to the existence of universal objects.
+	\begin{itemize}
+		\item Representability of $\DivXS$
+		\item Representability of $\PicXS$
+	\end{itemize}
+
+
+
+
+
+
+
+@article{DERIVED,
+	Author = {William W. Adams and Marc A. Rieffel},
+	Date-Added = {2014-1-07 10:35:18 +0000},
+	Date-Modified = {2014-1-07 10:35:18 +0000},
+	Journal = {Journal of Algebra},
+	Number = {7},
+	Pages = {25-34},
+	Title = {Adjoint Functors and Derived Functors with an Application to the Cohomology of Semigroups},
+	Year = {1967}
+	}
+
+
+
+
+
+		{\color{Red}Indeed, since any second cohomology group is trivial over a curve, we can apply Proposition \ref{prop:no_jumps} to see that the induced maps on fibers are isomorphisms:
+		$$
+			\left( u^*R^1\nu_*\scL \right)_{\mid D} = \left( R^1\nu_*\scL \right)_{\mid L} = 
+			H^1(X,L) = H^1(X,(u^*\scL)_{\mid D}) = 
+			\left( R^1\pi_* u^* \scL \right)_{\mid D}
+		$$
+		}
+		
+		
+		
+		
+		Indeed, {\color{Red}Use the Lemma here} since any second cohomology is trivial on a curve, we can apply Proposition \ref{prop:no_jumps}  to deduce that its fibers are $R^1 \nu_* \scL(\Gamma)_{\mid L} = H^1(X, L(E))$ which, due to the high degree of $E$, are all trivial as a consequence of the \RR Theorem.\\
+		
+		
+		
+		
+		To begin, notice that the canonical maps
+			$$ f: D \into \Dd \AND g: \calO(D)\into \Pd $$
+			satisfy the relation $g = u\circ f$. So on fibers we have
+			$$ L_{\mid D} = f^*L = f^* u^* \scL = (u\circ f)^* \scL = g^* \scL = \calO(D) = \calO(f^* \Delta) = f^*\calO(\Delta) = \calO(\Delta)_{\mid D} $$
+			and we can therefore apply Lemma \ref{lemm:square} to get a line bundle $F$ over $\Dd$ such that
+			$$ L = \calO(\Delta) \otimes \pi^* F \,, $$
+			where $\pi: X\times \Dd \to \Dd$ is the natural projection map. Applying the projection formula \ref{thm:projection_formula} we then get
+			$$ R^1\pi_*L = R^1\pi_*\calO(\Delta) \otimes F, $$
+			\begin{comment}
+				Being $\pi$ surjective and $F$ locally free, the identity $\pi_* \pi^* F = F$ holds, therefore we find
+				$$ \pi_*L = \pi_*\calO(\Delta) \otimes F $$
+				and, since tensoring with a line bundle is an exact functor, this in turns implies (see Proposition $1$ of \cite{DERIVED}, for instance)
+				$$ R^1\pi_*L = R^1\pi_*\calO(\Delta) \otimes F. $$
+			\end{comment}
+			which, since $\square \otimes F$ is right exact and doesn't affect Fitting ideals, implies that
+			\begin{equation}\label{eq:Fitt_otimes}
+				\Fitt(R^1\pi_* L) = \Fitt(R^1\pi_*\calO(\Delta)).
+			\end{equation}
+			Finally, applying Corollary \ref{coro:functoriality} we get a natural isomorphism
+
+			and therefore we conclude that
+			$$ \Fitt(u^* R^1\nu_*\scL) 
+			\,\overset{(\ref{eq:to_iso})}=\, 
+			\Fitt(R^1\pi_* u^*\scL) 
+			= \Fitt(R^1\pi_* L)
+			\,\overset{(\ref{eq:Fitt_otimes})}=\, 
+			\Fitt(R^1\pi_*\calO(\Delta)) $$
+			as desired.
+			
+			
+			
+			
+			
+			
+			
+			
+			$$
+			\begin{tikzpicture}[node distance=5em, auto]
+				\node (A) 															{$X\times \Dd$};
+				\node (B) 	[right of=A, xshift=4em]		{$X\times \Pd$};
+			  \node (C) 	[below of=A]	 							{$\Dd$};
+			  \node (D) 	[below of=B] 								{$\Pd$};
+			  \draw[-stealth] 				(A)		to node {$1\times u$} (B);
+			  \draw[-stealth]					(C)		to node {$u$} 				(D);
+			  \draw[-stealth][swap]		(A)		to node {$\pi$} 			(C);
+			  \draw[-stealth]					(B)		to node {$\nu$} 			(D);
+			\end{tikzpicture}
+			$$

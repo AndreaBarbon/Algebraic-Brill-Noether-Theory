@@ -1,0 +1,192 @@
+	\begin{lemm}
+		Let
+		$$
+			\begin{tikzpicture}[node distance=4em, auto]
+				\node 					(01) 											{$0$};
+				\node 					(A) 	[right of=01]				{$A$};
+				\node 					(B) 	[right of=A]				{$B$};
+				\node 					(C) 	[right of=B]				{$C$};
+				\node 					(D) 	[right of=C]				{$D$};
+			  \node 					(E) 	[right of=D]				{$E$};
+				\node 					(02) 	[right of=E]				{$0$};
+				%
+			  \draw[-stealth]	(01)		to node {$\;$} 		(A);
+			  \draw[-stealth]	(A)			to node {$a$} 		(B);
+			  \draw[-stealth]	(B)			to node {$b$}	 		(C);
+			  \draw[-stealth]	(C)			to node {$c$} 		(D);
+			  \draw[-stealth]	(D)			to node {$d$} 		(E);
+			  \draw[-stealth]	(E)			to node {$\;$} 		(02);
+				%
+			\end{tikzpicture}
+		$$
+		and
+		$$
+			\begin{tikzpicture}[node distance=4em, auto]
+				%
+				\node 					(01') [below of=01]				{$0$};
+				\node 					(A') 	[right of=01']			{$A'$};
+				\node 					(B') 	[right of=A']				{$B'$};
+				\node 					(C') 	[right of=B']				{$C'$};
+				\node 					(D') 	[right of=C']				{$D'$};
+			  \node 					(E') 	[right of=D']				{$E'$};
+				\node 					(02') [right of=E']				{$0$};
+			  %
+			  \draw[-stealth]	(01')		to node {$\;$} 		(A');
+			  \draw[-stealth]	(A')		to node {$a'$} 		(B');
+			  \draw[-stealth]	(B')		to node {$b'$}	 	(C');
+			 	\draw[-stealth]	(C')		to node {$c'$} 		(D');
+			  \draw[-stealth]	(D')		to node {$d'$} 		(E');
+			  \draw[-stealth]	(E')		to node {$\;$} 		(02');
+				%
+			\end{tikzpicture}
+		$$
+		be two exact sequences of finite dimensional vector spaces, such that 
+		$$ A\cong A',\quad B\cong B'\quad D\cong D',\quad E\cong E'.$$ 
+		Then for every choice of isomorphisms $\ph:B\toiso B'$ and $\psi:D\toiso D'$ there exist unique dashed isomorphisms making the below diagram commutative
+		$$
+		\begin{tikzpicture}[node distance=5em, auto]
+			\node 					(01) 											{$0$};
+			\node 					(A) 	[right of=01]				{$A$};
+			\node 					(B) 	[right of=A]				{$B$};
+			\node 					(C) 	[right of=B]				{$C$};
+			\node 					(D) 	[right of=C]				{$D$};
+		  \node 					(E) 	[right of=D]				{$E$};
+			\node 					(02) 	[right of=E]				{$0$};
+			%
+			\node 					(01') [below of=01]				{$0$};
+			\node 					(A') 	[right of=01']			{$A'$};
+			\node 					(B') 	[right of=A']				{$B'$};
+			\node 					(C') 	[right of=B']				{$C'$};
+			\node 					(D') 	[right of=C']				{$D'$};
+		  \node 					(E') 	[right of=D']				{$E'$};
+			\node 					(02') [right of=E']				{$0$};
+			%
+		  \draw[-stealth]	(01)		to node {$\;$} 		(A);
+		  \draw[-stealth]	(A)			to node {$a$} 		(B);
+		  \draw[-stealth]	(B)			to node {$b$}	 		(C);
+		  \draw[-stealth]	(C)			to node {$c$} 		(D);
+		  \draw[-stealth]	(D)			to node {$d$} 		(E);
+		  \draw[-stealth]	(E)			to node {$\;$} 		(02);
+		  %
+		  \draw[-stealth][swap]	(01')		to node {$\;$} 		(A');
+		  \draw[-stealth][swap]	(A')		to node {$a'$} 		(B');
+		  \draw[-stealth][swap]	(B')		to node {$b'$}	 	(C');
+		 	\draw[-stealth][swap]	(C')		to node {$c'$} 		(D');
+		  \draw[-stealth][swap]	(D')		to node {$d'$} 		(E');
+		  \draw[-stealth][swap]	(E')		to node {$\;$} 		(02');
+			%
+		  \draw[-stealth, dashed]	(A)			to node {$\;$} 		(A');
+		  \draw[-stealth]	(B)							to node {$\ph$}	 	(B');
+		  \draw[-stealth, dashed]	(C)			to node {$\;$} 		(C');
+		  \draw[-stealth]	(D)							to node {$\psi$} 	(D');
+		  \draw[-stealth, dashed]	(E)			to node {$\;$} 		(E');
+		\end{tikzpicture}
+		$$
+		In particular, $C$ and $C'$ are isomorphic.
+	\end{lemm}
+	\begin{proof}
+		By a dimension count we see that 
+		$$ I=\im \left( B\to C\right) \AND I'=\im \left(B'\to C'\right) $$ 
+		are isomorphic. Since \sess of vector spaces split, we have 
+		$$ B=A\oplus I \AND B'=A'\oplus I',$$ 
+		therefore we get the commutative diagram
+		$$
+			\begin{tikzpicture}[node distance=6em, auto]
+				\node 					(01) 																{$0$};
+				\node 					(A) 	[right of=01, xshift=-1em]		{$A$};
+				\node 					(B) 	[right of=A, xshift=-0em]			{$B$};
+				\node 					(C) 	[right of=B]									{$I$};
+				\node 					(02) 	[right of=C, xshift=-1em]			{$0$};
+				%
+				\node 					(01') [below of=01, yshift=1em]		{$0$};
+				\node 					(A') 	[right of=01', xshift=-1em]		{$A'$};
+				\node 					(B') 	[right of=A', xshift=-0em]		{$B'$};
+				\node 					(C') 	[right of=B']									{$I'$};
+				\node 					(02') [right of=C', xshift=-1em]		{$0$};
+				%
+			  \draw[-stealth]	(01)		to node {$\;$} 		(A);
+			  \draw[-stealth]	(A)			to node {$\;$} 		(B);
+			  \draw[-stealth]	(B)			to node {$\;$}	 	(C);
+			  \draw[-stealth]	(C)			to node {$\;$}		(02);
+			  %
+			  \draw[-stealth][swap]	(01')		to node {$\;$} 		(A');
+			  \draw[-stealth][swap]	(A')		to node {$\;$} 		(B');
+			  \draw[-stealth][swap]	(B')		to node {$\;$}	 	(C');
+			 	\draw[-stealth][]	(C')				to node {$\;$} 		(02');
+				%
+			  \draw[-stealth, dashed]	(A)			to node {$\ph_1$} 	(A');
+			  \draw[-stealth]	(B)							to node {$\ph$}	 		(B');
+			  \draw[-stealth, dashed]	(C)			to node {$\ph_2$} 	(C');
+			\end{tikzpicture}
+		$$
+		by splitting the given $\ph$ as $\ph_1\oplus \ph_2$. Similarly we obtain
+		$$
+			\begin{tikzpicture}[node distance=6em, auto]
+				\node 					(01) 																{$0$};
+				\node 					(A) 	[right of=01, xshift=-1em]		{$C/I$};
+				\node 					(B) 	[right of=A, xshift=-0em]			{$D$};
+				\node 					(C) 	[right of=B]									{$E$};
+				\node 					(02) 	[right of=C, xshift=-1em]			{$0$};
+				%
+				\node 					(01') [below of=01, yshift=1em]		{$0$};
+				\node 					(A') 	[right of=01', xshift=-1em]		{$C'/I'$};
+				\node 					(B') 	[right of=A', xshift=-0em]		{$D'$};
+				\node 					(C') 	[right of=B']									{$E'$};
+				\node 					(02') [right of=C', xshift=-1em]		{$0$};
+				%
+			  \draw[-stealth]	(01)		to node {$\;$} 		(A);
+			  \draw[-stealth]	(A)			to node {$\;$} 		(B);
+			  \draw[-stealth]	(B)			to node {$\;$}	 	(C);
+			  \draw[-stealth]	(C)			to node {$\;$}		(02);
+			  %
+			  \draw[-stealth][swap]	(01')		to node {$\;$} 		(A');
+			  \draw[-stealth][swap]	(A')		to node {$\;$} 		(B');
+			  \draw[-stealth][swap]	(B')		to node {$\;$}	 	(C');
+			 	\draw[-stealth][]	(C')				to node {$\;$} 		(02');
+				%
+			  \draw[-stealth, dashed]	(A)			to node {$\psi_1$} 	(A');
+			  \draw[-stealth]	(B)							to node {$\psi$}	 	(B');
+			  \draw[-stealth, dashed]	(C)			to node {$\psi_2$} 	(C');
+			\end{tikzpicture}
+		$$
+		we get to the conclusion by putting the two diagrams together
+		$$
+			\begin{tikzpicture}[node distance=6em, auto]
+				\node 					(01) 																{$0$};
+				\node 					(A) 	[right of=01, xshift=-3em]		{$A$};
+				\node 					(B) 	[right of=A, xshift=-0em]			{$B$};
+				\node 					(C) 	[right of=B]									{$C$};
+				\node 					(D) 	[right of=C]									{$D$};
+			  \node 					(E) 	[right of=D]									{$E$};
+				\node 					(02) 	[right of=E, xshift=-3em]			{$0$};
+				%
+				\node 					(01') [below of=01, yshift=1em]			{$0$};
+				\node 					(A') 	[right of=01', xshift=-3em]		{$A'$};
+				\node 					(B') 	[right of=A', xshift=-0em]		{$B'$};
+				\node 					(C') 	[right of=B']									{$C'$};	
+				\node 					(D') 	[right of=C']									{$D'$};
+			  \node 					(E') 	[right of=D']									{$E'$};
+				\node 					(02') [right of=E', xshift=-3em]		{$0$};
+				%
+			  \draw[-stealth]	(01)		to node {$\;$} 		(A);
+			  \draw[-stealth]	(A)			to node {$\;$} 		(B);
+			  \draw[-stealth]	(B)			to node {$\;$}	 	(C);
+			  \draw[-stealth]	(C)			to node {$\;$}		(D);
+			  \draw[-stealth]	(D)			to node {$\;$} 		(E);
+			  \draw[-stealth]	(E)			to node {$\;$} 		(02);
+			  %
+			  \draw[-stealth][swap]	(01')		to node {$\;$} 		(A');
+			  \draw[-stealth][swap]	(A')		to node {$\;$} 		(B');
+			  \draw[-stealth][swap]	(B')		to node {$\;$}	 	(C');
+			 	\draw[-stealth][]	(C')				to node {$\;$} 		(D');
+			  \draw[-stealth][swap]	(D')		to node {$\;$} 		(E');
+			  \draw[-stealth][swap]	(E')		to node {$\;$} 		(02');
+				%
+			  \draw[-stealth, dashed]	(A)			to node {$\ph_1$} 							(A');
+			  \draw[-stealth]	(B)							to node {$\ph$}	 								(B');
+			  \draw[-stealth, dashed]	(C)			to node {$\ph_2\oplus \psi_1$} 	(C');
+			  \draw[-stealth]	(D)							to node {$\psi$} 								(D');
+			  \draw[-stealth, dashed]	(E)			to node {$\psi_2$} 							(E');
+			\end{tikzpicture}
+		$$
+	\end{proof}

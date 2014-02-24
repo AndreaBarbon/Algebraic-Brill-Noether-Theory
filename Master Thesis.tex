@@ -1,0 +1,623 @@
+% ----------------------------------------------------------------------
+%
+%
+%
+%
+% ----------------------------------------------------------------------
+
+% ----------------------------------------------------------------------
+%                   LATEX TEMPLATE FOR PhD THESIS
+% ----------------------------------------------------------------------
+
+% based on Harish Bhanderi's PhD/MPhil template, then Uni Cambridge
+% http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/ThesisStyle/
+% corrected and extended in 2007 by Jakob Suckale, then MPI-CBG PhD programme
+% and made available through OpenWetWare.org - the free biology wiki
+
+%: Style file for Latex
+% Most style definitions are in the external file PhDthesisPSnPDF.
+% In this template package, it can be found in ./Latex/Classes/
+\documentclass[twoside,11pt]{Latex/Classes/PhDthesisPSnPDF}
+
+	
+%: Macro file for Latex
+% Macros help you summarise frequently repeated Latex commands.
+% Here, they are placed in an external file /Latex/Macros/MacroFile1.tex
+% An macro that you may use frequently is the figuremacro (see introduction.tex)
+\include{Latex/Macros/MacroFile1}
+
+
+\usepackage[T1]{fontenc}
+%\usepackage{pvscript}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{epigraph}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{mathrsfs}
+\usepackage{verbatim}
+%\usepackage{therefore}
+\usepackage{enumerate}
+\usepackage{bm}
+
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\epstopdfsetup{outdir=./}
+\setcitestyle{square}
+
+
+\usepackage{csquotes}
+%\usepackage[backend=biber,url=true,style=alphabetic]{biblatex}
+\PassOptionsToPackage{style=alphabetic}{biblatex}
+\usepackage{filecontents}
+
+\usepackage{embedfile}
+
+
+
+
+% Diagrams
+  \usepackage{tikz}
+  \usetikzlibrary{matrix,arrows}
+  \tikzset{node distance=10em, auto}
+  \usetikzlibrary{positioning}
+  \usepackage{tikz-cd}
+
+
+
+\setlength{\parindent}{0pt}
+
+
+%\usepackage[italian]{babel}
+\setlength{\epigraphwidth}{.6\textwidth}
+
+\usepackage[utf8]{inputenc} %Questo permette di scrivere le lettere accentate
+\PassOptionsToPackage{english}{babel}
+%\PassOptionsToPackage{0pt}{parident}
+
+
+%Comandi
+  \newcommand{\AND}{\qquad \text{and} \qquad}
+  \newcommand{\OR}{\qquad \text{or} \qquad}
+  \newcommand{\implica}{\quad \Longrightarrow \quad}
+  \newcommand{\st}{\; \text{s.t.} \;}
+  \newcommand{\fora}[2]{, \qquad \forall #1 \in #2}
+  \newcommand{\set}[1]{\left\{\; #1 \; \right\}}
+
+
+%Generic commands
+  \newcommand{\C}{\mathbb{C}}
+  \newcommand{\R}{\mathbb{R}}
+  \newcommand{\N}{\mathbb{N}}
+  \newcommand{\Q}{\mathbb{Q}}
+  \newcommand{\A}{\mathbb{A}}
+  \newcommand{\Z}{\mathbb{Z}}
+
+  \newcommand{\PP}{\mathbb{P}}
+
+  \newcommand{\sab}{\sum_{(a)(b)}}
+  \newcommand{\e}{\varepsilon}
+  \newcommand{\D}[2]{\frac{\partial #1}{\partial #2}}
+  \newcommand{\dd}{\partial}
+  \newcommand{\al}{\alpha}
+  \newcommand{\alb}{{\alpha\beta}}
+  \newcommand{\w}{\omega}
+  \newcommand{\ph}{\varphi}
+  \newcommand{\eps}{\varepsilon}
+
+
+
+%Cal letters
+
+
+  %\newcommand*\calO{\includegraphics{calO}}
+
+  \newcommand{\E}{$\mathcal{E}\;$}
+  \newcommand{\F}{$\mathcal{F}\;$}
+
+  \newcommand{\calZ}{\mathcal{Z}}
+  \newcommand{\calC}{\mathcal{C}}
+  \newcommand{\calO}{\mathcal{O}}
+  \newcommand{\calM}{\mathscr{M}}
+  \newcommand{\calL}{\mathcal{L}}
+  \newcommand{\calN}{\mathcal{N}}
+  \newcommand{\calD}{\mathcal{D}}
+  \newcommand{\calI}{\mathcal{I}}
+  \newcommand{\calT}{\mathcal{T}}
+
+%Frak letters
+  \newcommand{\frakm}{\mathfrak{m}}
+
+%Others
+
+  \newcommand{\scr}[1]{\mathscr{#1}}
+  \newcommand{\mcal}[1]{\mathcal{#1}}
+  \newcommand{\scN}{\mathscr{N}}
+  \newcommand{\scD}{\mathscr{D}}
+  \newcommand{\scL}{\mathscr{L}}
+  \newcommand{\scO}{\mathscr{O}}
+  \newcommand{\scI}{\mathscr{I}}
+  \newcommand{\LD}{\mathscr{L}(D)}
+  \newcommand{\T}{\mathcal{T}}
+
+  \newcommand{\PG}{\PP^{g-1}}
+
+
+  \newcommand{\OX}{\calO_X}
+  \newcommand{\OY}{\calO_Y}
+  \newcommand{\OC}{\calO_C}
+  \newcommand{\OD}{\calO(D)}
+  \newcommand{\OXD}{\OX(D)}
+  \newcommand{\ND}{\calN_D}
+  \newcommand{\ODD}{\calO_D(D)}
+
+  \newcommand{\wpd}{\widebar{\phi(D)}}
+
+
+  \newcommand{\into}{\hookrightarrow}
+  \newcommand{\tolong}{\longrightarrow}
+  \newcommand{\toiso}{\overset{\cong}\longrightarrow}
+
+  \newcommand{\RRo}{Riemann-Roch}
+  \newcommand{\RR}{Riemann-Roch }
+
+  \newcommand{\BNo}{Brill-Noether}
+  \newcommand{\BN}{Brill-Noether }
+
+  \newcommand{\ses}{short exact sequence }
+  \newcommand{\sess}{short exact sequences }
+  \newcommand{\les}{long exact sequence }
+  \newcommand{\trf}{transition functions }
+
+  \newcommand{\ABiff}{if and only if }
+
+
+  \newcommand{\IF}{\quad\text{if}\quad}
+  \newcommand{\WHEN}{\quad\text{when}\quad}
+
+
+  \newcommand{\Cech}{\v{C}ech }
+
+
+  \newcommand{\Mtt}{\tilde{M}_t}  
+  \newcommand{\Xdr}{X_d^r}  
+  \newcommand{\Xdrr}{ \underline{X}_d^{r} }  
+  \newcommand{\Wdr}{W_d^r}  
+  \newcommand{\Wdrr}{ \underline{W}_d^{r} }  
+  \newcommand{\Gdr}{G_d^{\,r}}  
+
+  \newcommand{\pairing}{\langle\,\bullet,\;\bullet\,\rangle}  
+  \newcommand{\pair}[2]{\langle\, #1,\; #2 \,\rangle}  
+
+
+  \newcommand{\uA}{\underline{A}}
+
+%Sequences
+  \newcommand{\SES}[3]{ 0 \to #1 \to #2 \to #3 \to 0 }
+
+  \newcommand{\da}[1]{\left\downarrow{\scriptstyle#1}\vphantom{\displaystyle\sum}\right.}
+
+  \newcommand{\prefive}[5]{%
+      \def\tempa{#1}%
+      \def\tempb{#2}%
+      \def\tempc{#3}%
+      \def\tempd{#4}%
+      \def\tempe{#5}%
+  }
+  \newcommand{\five}[5]{%
+    \begin{array}{ccccccccccccc}
+      0 & \to   & #1        & \to   & #2        & \to   & #3        & \to   & #4        & \to   & #5          & \to & 0 \\\\
+        &       & \da{}     &       & \da{}     &       & \da{}     &       & \da{}     &       & \da{}       &     &   \\\\
+      0 & \to   & \tempa    & \to   & \tempb    & \to   & \tempc    & \to   & \tempd    & \to   & \tempe      & \to & 0 
+    \end{array}  
+  }
+
+
+
+%Lists
+\newcommand{\ABList}[2]{ #1_{1},\dots,#1_{#2} }
+
+
+\newcommand{\separator}{\par
+  \kern20pt % space above the rules
+  \hrule height 0.5pt
+  \kern1pt % space between the rules
+  \hrule height 0.5pt
+  \kern20pt % space below the rules
+}
+
+
+% Math Operators
+    
+  \DeclareMathOperator{\Reg}{Reg}
+  \DeclareMathOperator{\Gal}{Gal}
+  \DeclareMathOperator{\presheaf}{pre}
+  \DeclareMathOperator{\id}{id}
+  \DeclareMathOperator{\im}{Im}
+  \DeclareMathOperator{\coker}{coker}
+  \DeclareMathOperator{\fraction}{Frac}
+  \DeclareMathOperator{\homog}{hom}
+  \DeclareMathOperator{\Char}{Char}
+  \DeclareMathOperator{\Spann}{Span}
+  \DeclareMathOperator{\Span}{Span}
+  \DeclareMathOperator{\Hom}{Hom_k}
+  \DeclareMathOperator{\HomS}{Hom_S}
+  \DeclareMathOperator{\rank}{rank}
+  \DeclareMathOperator{\Prin}{Prin}
+  \DeclareMathOperator{\Set}{Set}
+  \DeclareMathOperator{\Exp}{exp}
+  \DeclareMathOperator{\Mat}{Mat}
+  \DeclareMathOperator{\codim}{codim}
+  \DeclareMathOperator{\Res}{Res}
+  \DeclareMathOperator{\Supp}{Supp}
+  \DeclareMathOperator{\Fitt}{Fitt}
+  \DeclareMathOperator{\FittS}{FittS}
+  \DeclareMathOperator{\height}{height}
+  \DeclareMathOperator{\Grass}{Grass}
+  \DeclareMathOperator{\Sym}{Sym}
+  \DeclareMathOperator{\Fib}{Fiber}
+
+  \DeclareMathOperator{\Cl}{Cl}
+  
+  \DeclareMathOperator{\DivB}{\mathbf{Div}}
+  \DeclareMathOperator{\PicB}{\mathbf{Pic}}
+  
+  \DeclareMathOperator{\Div}{Div}
+  \DeclareMathOperator{\EDiv}{EDiv}
+  \DeclareMathOperator{\Pic}{Pic}
+  \newcommand{\Dd}{X_d}
+  \newcommand{\Pd}{\Pic^{\,d}_X}
+  \newcommand{\Dm}{X_m}
+  \newcommand{\Pm}{\Pic^{\,m}_X}  
+  \newcommand{\Dn}{X_n}
+  \newcommand{\Pn}{\Pic^{\,n}_X}
+  \DeclareMathOperator{\FDiv}{\mathbf{FDiv}}
+  \DeclareMathOperator{\FPic}{\mathbf{FPic}}
+
+  \newcommand{\Divxk}{\DivB_{X/k}}
+  \newcommand{\Picxk}{\PicB_{X/k}}
+  \newcommand{\DivXS}{\DivB_{X/S}}
+  \newcommand{\PicXS}{\PicB_{X/S}}
+
+  \DeclareMathOperator{\Spec}{Spec}
+  \DeclareMathOperator{\Sch}{Sch}
+  \DeclareMathOperator{\Ab}{Ab}
+
+  \DeclareMathOperator{\pre}{pre}
+
+%\theoremstyle{definition}
+
+
+  \newcommand{\modu}{$\Xdr$ and $\Wdr$}
+  \newcommand{\moduu}{$\Xdr$ and $\Wdr$ }
+
+
+  \newcommand{\Ho}{\operatorname{Hom}{}}
+  \newcommand{\HH}{\mathscr{H}}
+
+  \newcommand{\HDD} { H^0(D)_D }
+  \newcommand{\Tu}  { Tu }
+  \newcommand{\TDu} { T_D u }
+
+  \newcommand{\AJ}{Abel-Jacobi}
+  \newcommand{\AJJ}{Abel-Jacobi }
+
+
+\newtheoremstyle{spacytheorem}
+  {1.5em} % Space above
+  {1.5em} % Space below
+  {\itshape} % Body font
+  {0em} % Indent amount
+  {\bfseries} % Theorem head font
+  {.} % Punctuation after theorem head
+  {.5em} % Space after theorem head
+  {} % Theorem head spec (can be left empty, meaning `normal')
+\theoremstyle{spacytheorem}
+
+\newtheorem{prop}{Proposition}[chapter]
+\newtheorem{theo}[prop]{Theorem}
+\newtheorem{lemm}[prop]{Lemma}
+\newtheorem{coro}[prop]{Corollary}
+
+\newtheoremstyle{named}{}{}{\itshape}{}{\bfseries}{.}{.5em}{\thmnote{#3}}
+\theoremstyle{named}
+\newtheorem*{namedtheo}{Theorem}
+
+
+\theoremstyle{theorem}
+\newtheorem{notation}{Notation}[]
+
+\theoremstyle{theorem}
+\newtheorem{assumption}{Assumption}[]
+
+\theoremstyle{definition}
+\newtheorem{example}{Example}[]
+
+
+\theoremstyle{definition}
+\newtheorem{defi}[prop]{Definition}
+
+\theoremstyle{definition}
+\newtheorem{rema}[prop]{Remark}
+
+
+
+
+
+
+
+% Widebar
+
+  \makeatletter
+  \newcommand*\rel@kern[1]{\kern#1\dimexpr\macc@kerna}
+  \newcommand*\widebar[1]{%
+    \begingroup
+    \def\mathaccent##1##2{%
+      \rel@kern{0.8}%
+      \overline{\rel@kern{-0.8}\macc@nucleus\rel@kern{0.2}}%
+      \rel@kern{-0.2}%
+    }%
+    \macc@depth\@ne
+    \let\math@bgroup\@empty \let\math@egroup\macc@set@skewchar
+    \mathsurround\z@ \frozen@everymath{\mathgroup\macc@group\relax}%
+    \macc@set@skewchar\relax
+    \let\mathaccentV\macc@nested@a
+    \macc@nested@a\relax111{#1}%
+    \endgroup
+  }
+  \makeatother
+
+
+
+%: ----------------------------------------------------------------------
+%:                  TITLE PAGE: name, degree,..
+% ----------------------------------------------------------------------
+% below is to generate the title page with crest and author name
+
+%if output to PDF then put the following in PDF header
+\ifpdf  
+    \pdfinfo { /Title  (Algebraic Brill-Noether Theory)
+               /Creator (Andrea Barbon)
+               /Producer (Andrea Barbon)
+               /Author (Andrea Barbon)
+               /CreationDate (\today)  %format D:YYYYMMDDhhmmss
+               /ModDate (\today)
+               /Subject (Algebraic Geometry)
+               /Keywords (Brill-Noether Theory) }
+    \pdfcatalog { /PageMode (/UseOutlines)
+                  /OpenAction (fitbh)  }
+\fi
+
+
+\title{Algebraic Brill-Noether Theory}
+
+
+
+% ----------------------------------------------------------------------
+% The section below defines www links/email for author and institutions
+% They will appear on the title page of the PDF and can be clicked
+\ifpdf
+  \author{\href{mailto:andrea.3arbon@gmail.com}{Andrea Barbon}}
+%  \cityofbirth{born in XYZ} % uncomment this if your university requires this
+%  % If city of birth is required, also uncomment 2 sections in PhDthesisPSnPDF
+%  % Just search for the "city" and you'll find them.
+  %\collegeordept{\href{http://www.vu.nl/math/}{Mathematics Department}}
+  \university{
+    \href{http://www.ru.nl/english/ }{  Radboud University Nijmegen   }\\ 
+    \href{http://www.vu.nl/en/      }{  Vrije Universiteit Amsterdam  }\\ 
+    \href{http://www.uva.nl/en/     }{  Universiteit Van Amsterdam    }
+  }
+
+  % The crest is a graphics file of the logo of your research institution.
+  % Place it in ./0_frontmatter/figures and specify the width
+  \crest{\includegraphics[width=10cm]{logo_new}}
+  
+% If you are not creating a PDF then use the following. The default is PDF.
+\else
+  \author{Andrea Barbon}
+  \cityofbirth{born in Venice}
+  \collegeordept{Mathematics Department}
+  \university{Radboud University Nijmegen, Vrije Universiteit Amsterdam, Universiteit Van Amsterdam}
+  \crest{\includegraphics[width=3cm]{logo}}
+\fi
+
+\renewcommand{\submittedtext}{Master Degree in}
+\degree{Mathematics}
+\degreedate{Academic Year 2013-2014}
+
+
+% ----------------------------------------------------------------------
+       
+% turn of those nasty overfull and underfull hboxes
+\hbadness=10000
+\hfuzz=50pt
+
+
+%: --------------------------------------------------------------
+%:                  FRONT MATTER: dedications, abstract,..
+% --------------------------------------------------------------
+
+\begin{document}
+
+%\language{english}
+
+% sets line spacing
+\renewcommand\baselinestretch{1.2}
+\baselineskip=18pt plus1pt
+%\setlength{\parident}{0pt}
+
+
+%\begin{comment}
+  
+  %: ----------------------- generate cover page ------------------------
+
+  \maketitle  % command to print the title page with above variables
+
+
+  %: ----------------------- cover page back side ------------------------
+  % Your research institution may require reviewer names, etc.
+  % This cover back side is required by Dresden Med Fac; uncomment if needed.
+
+  \newpage
+  \vspace{30mm}
+  Supervisor: B.J.J. Moonen \hspace{45mm} Second reader: R.M.H. de Jeu
+
+  \vspace{20mm}
+  Discussion Date: March 2014
+
+  \vspace{20mm}
+  Supervisor sign
+
+
+
+  %: ----------------------- abstract ------------------------
+
+  % Your institution may have specific regulations if you need an abstract and where it is to be placed in the document. The default here is just after title.
+
+  \include{0_frontmatter/abstract}
+
+
+
+  % The original template provides and abstractseparate environment, if your institution requires them to be separate. I think it is easier to print the abstract from the complete thesis by restricting printing to the relevant page.
+  % \begin{abstractseparate}
+  %   \input{Abstract/abstract}
+  % \end{abstractseparate}
+
+
+  %: ----------------------- tie in front matter ------------------------
+
+  \frontmatter
+  %\include{0_frontmatter/dedication}
+  %\include{0_frontmatter/acknowledgement}
+
+%\end{comment}
+
+  %: ----------------------- contents ------------------------
+  \renewcommand{\contentsname}{Index}
+  \setcounter{secnumdepth}{3} % organisational level that receives a numbers
+  \setcounter{tocdepth}{3}    % print table of contents for level 3
+  \tableofcontents            % print the table of contents
+  % levels are: 0 - chapter, 1 - section, 2 - subsection, 3 - subsection
+
+
+%: ----------------------- list of figures/tables ------------------------
+
+%\listoffigures	% print list of figures
+
+%\listoftables  % print list of tables
+
+
+%: ----------------------- glossary ------------------------
+
+% Tie in external source file for definitions: /0_frontmatter/glossary.tex
+% Glossary entries can also be defined in the main text. See glossary.tex
+%\include{0_frontmatter/glossary} 
+
+%\begin{multicols}{2} % \begin{multicols}{#columns}[header text][space]
+%\begin{footnotesize} % scriptsize(7) < footnotesize(8) < small (9) < normal (10)
+
+%\printnomenclature[1.5cm] % [] = distance between entry and description
+%\label{nom} % target name for links to glossary
+
+%\end{footnotesize}
+%\end{multicols}
+
+
+
+%: --------------------------------------------------------------
+%:                  MAIN DOCUMENT SECTION
+% --------------------------------------------------------------
+
+% the main text starts here with the introduction, 1st chapter,...
+\mainmatter
+
+\renewcommand{\chaptername}{} % uncomment to print only "1" not "Chapter 1"
+
+
+%: ----------------------- subdocuments ------------------------
+
+% Parts of the thesis are included below. Rename the files as required.
+% But take care that the paths match. You can also change the order of appearance by moving the include commands.
+
+%\include{0/0}
+\include{1/1}
+\include{2/2}
+\include{3/3}
+\include{4/4}
+%
+\include{5/5} %Appendix A - Algebraic Results
+\include{6/6} %Appendix B - Riemann Roch & Serre Duality
+
+
+%\include{7/discussion}               % discussion of results
+
+%\include{8/materials_methods}        % description of lab methods
+
+
+
+
+% --------------------------------------------------------------
+%:                  BACK MATTER: appendices, refs,..
+% --------------------------------------------------------------
+
+% the back matter: appendix and references close the thesis
+
+
+%: ----------------------- bibliography ------------------------
+
+% The section below defines how references are listed and formatted
+% The default below is 2 columns, small font, complete author names.
+% Entries are also linked back to the page number in the text and to external URL if provided in the BibTex file.
+
+% PhDbiblio-url2 = names small caps, title bold & hyperlinked, link to page 
+%\begin{multicols}{2} % \begin{multicols}{ # columns}[ header text][ space]
+  
+\begin{small} % tiny(5) < scriptsize(7) < footnotesize(8) < small (9)
+
+  \bibliographystyle{Latex/Classes/PhDbiblio-url2} % Title is link if provided
+  \renewcommand{\bibname}{Bibliography} % changes the header; default: Bibliography
+
+  \bibliography{9_backmatter/bibliografia} % adjust this to fit your BibTex file
+
+\end{small}
+
+
+%\end{multicols}
+
+% --------------------------------------------------------------
+% Various bibliography styles exit. Replace above style as desired.
+
+% in-text refs: (1) (1; 2)
+% ref list: alphabetical; author(s) in small caps; initials last name; page(s)
+%\bibliographystyle{Latex/Classes/PhDbiblio-case} % title forced lower case
+%\bibliographystyle{Latex/Classes/PhDbiblio-bold} % title as in bibtex but bold
+%\bibliographystyle{Latex/Classes/PhDbiblio-url} % bold + www link if provided
+
+%\bibliographystyle{Latex/Classes/jmb} % calls style file jmb.bst
+% in-text refs: author (year) without brackets
+% ref list: alphabetical; author(s) in normal font; last name, initials; page(s)
+
+%\bibliographystyle{plainnat} % calls style file plainnat.bst
+% in-text refs: author (year) without brackets
+% (this works with package natbib)
+
+
+% --------------------------------------------------------------
+
+% according to Dresden med fac summary has to be at the end
+%\include{0_frontmatter/abstract}
+
+%: Declaration of originality
+%\include{9_backmatter/declaration}
+
+
+
+\end{document}
