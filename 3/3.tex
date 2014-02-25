@@ -273,7 +273,7 @@ will turn out to play a crucial role. Relying on this description we will be abl
 
 	We are now going to define a variety $\Gdr$ parametrising $g_d^r$ on the curve $X$, i.e.\ (not necessarily complete) linear series of degree $d$ and dimension $r$. Our objective is to give the right definition for $\Gdr$ and then show that its support is given by
 	$$ \Supp(\Gdr) = \set{ (L,W) \in \Pd \times \mathbb{G}(r+1, H^0(L)) } $$
-	where $L$ is a line bundle on $X$ and $\mathbb{G}(r+1, H^0(L))$ denotes the Grassanian bundle of $(r+1)$-dimensional linear subspaces of $H^0(L)$.
+	where $L$ is a line bundle on $X$ and $\mathbb{G}(r+1, H^0(L))$ denotes the Grassmannian bundle of $(r+1)$-dimensional linear subspaces of $H^0(L)$.
 	In order to give a scheme structure to $\Gdr$, we need to introduce a useful algebraic object. Let $G$ be a locally free and finitely presented sheaf over a scheme $Y$ and $ E\overset{\varphi}\to F \to G \to 0$ a free presentation of $G$, where $E$ and $F$ have finite ranks $e$ and $f$. Moreover, for every natural number $t\leq e$, let
 	$$ \pi:\mathbb{G}(e-t, E)\to Y $$ 
 	be the projection from the Grassmannian bundle of $(e-t)$-subspaces of sections of $E$ to $Y$.
@@ -284,7 +284,7 @@ will turn out to play a crucial role. Relying on this description we will be abl
 	$$ 0\to V \to E_y \to E_y/V \to 0 \,. $$
 	Next, we define the following subset of $\mathbb{G}(e-t, E)$ as a specific vanishing locus:
 	\begin{defi}
-		Ve define $\Grass_t(G) \subset \mathbb{G}(e-t, E)$ to be the vanishing locus of the morphism of sheaves
+		We define $\Grass_t(G) \subset \mathbb{G}(e-t, E)$ to be the vanishing locus of the morphism of sheaves
 		$$ S\longrightarrow \pi^*E \overset{\pi^*\varphi} \longrightarrow \pi^* F $$
 		i.e.\ the closed subset of the support of $\mathbb{G}(e-t, E)$ consisting of those points over which $S\to \pi^* F$ restricts to the zero morphism.
 	\end{defi}
@@ -336,11 +336,11 @@ will turn out to play a crucial role. Relying on this description we will be abl
 	\begin{equation*}
 		T\beta(T_w \Gdr) \cong \set{ \phi \in H^1(\OX) \mid \phi\cdot W = 0 \text{ in } H^1(L) }.
 	\end{equation*}
-	Further, this description can be reformulated using Serre's duality by considering the restriction of $\mu_0$ to $W\subseteq H^0(L)$, i.e.\ the map
+	Further, this description can be reformulated using Serre duality by considering the restriction of $\mu_0$ to $W\subseteq H^0(L)$, i.e.\ the map
 	$$ \mu_{0,W} : W\otimes H^0(K-L) \to H^0(K), \quad s\otimes s' \mapsto s\cdot s'. $$
 	Indeed, since the duality pairing is perfect, the condition $\phi\cdot W = 0$ is equivalent to require that $\forall s\in W$ and $\forall s'\in H^0(K-L)$ the pairing
 	$$ \langle\, s',\, s\cdot \phi \, \rangle = \langle \,s'\cdot s,\, \phi \,\rangle $$
-	vanishes. Notice that the above identity follows from Lemma \ref{lemm:pairing_properties} of Appendix A and the local description of abelian differentials. Therefore, in a more concise form, we can write 
+	vanishes. Notice that the above identity follows from Lemma \ref{lemm:pairing_properties} of Appendix A and the local description of Abelian differentials. Therefore, in a more concise form, we can write 
 	\begin{equation}\label{eq:im_beta_*}
 		T\beta(T_w \Gdr)\cong(\,\im \mu_{0,W}\,)^{\vee}.
 	\end{equation}
@@ -385,7 +385,7 @@ will turn out to play a crucial role. Relying on this description we will be abl
 		Hence $\Gdr$ is smooth of dimension $\rho$ at $w$ \ABiff $\mu_{0,W}$ is injective.
 	\end{prop}
 	\begin{proof}
-		The lower bound on the dimension of $\Gdr$ follows directly from Theorem \ref{thm:lowerbounds}, since $\beta$ is onto $\Wdr$. To get the dimension of $T_w \Gdr$, notice that the fiber of $\beta$ over a point $L\in \Wdr$ is canonically isomorphic to the grassmanian $\mathbb{G}(r+1,H^0(L))$, whose tangent space at a point $W$ is given by $\Hom(W, H^0(L) / W)$. Hence we have a \ses
+		The lower bound on the dimension of $\Gdr$ follows directly from Theorem \ref{thm:lowerbounds}, since $\beta$ is onto $\Wdr$. To get the dimension of $T_w \Gdr$, notice that the fiber of $\beta$ over a point $L\in \Wdr$ is canonically isomorphic to the Grassmannian $\mathbb{G}(r+1,H^0(L))$, whose tangent space at a point $W$ is given by $\Hom(W, H^0(L) / W)$. Hence we have a \ses
 		$$ \SES{ \Hom(W, H^0(L) / W) }{ T_w \Gdr }{ \im (T\beta) } $$
 		and the result follows from a trivial computation:
 		\begin{eqnarray*}

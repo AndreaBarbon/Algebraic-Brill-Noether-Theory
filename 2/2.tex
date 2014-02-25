@@ -29,8 +29,8 @@
 \nocite{*}
 
 
-In the first part of this Chapter we will introduce the relative Divisor and Picard functors, which map a scheme $T$ to flat families of effective Cartier divisors and, respectively, to families of line bundles with rigidification parametrised by $T$. 
-The representability of these functors -- achieved under some particular assumptions -- gives rise to scheme structures for the sets of divisors and line bundles on the curve $X$ and, further, two universal objects which will be fundamental for the rest of our discussion: the universal divisor $\Delta$ and the universal line bundle $\scL$.\\
+In the first part of this Chapter we will introduce the relative Divisor and Picard functors which, respectively, map a scheme $T$ to flat families of effective Cartier divisors and to families of line bundles with rigidification parametrised by $T$. 
+The representability of such functors -- achieved under some particular assumptions -- gives rise to scheme structures for the sets of divisors and line bundles on the curve $X$ and, further, to two universal objects which will be fundamental for the rest of our discussion: the universal divisor $\Delta$ and the universal line bundle $\scL$.\\
 Next, exploiting the obtained scheme structure for $\EDiv_X$ and $\Pic_X$, we will compute their tangent spaces. 
 It is interesting to observe that the tangent space at a closed point $D$ of the Divisor scheme is naturally isomorphic to the cohomology group $H^0(D)_D$ arising from the sheaf-cohomology of the line bundle $\OXD$ and that, moreover, the tangent space of the Picard scheme at any closed point is simply isomorphic to $H^1(\OX)$ -- the space of first order deformations of line bundles.
 This cohomological point of view leads to a description of the \AJJ map by means of the coboundary morphism 
@@ -53,7 +53,7 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 			\; f_*\calO_{X_T} \cong \calO_T \text{ for every $S$-scheme } T \\			
 		\end{cases}
 	$$
-	where we abuse notation by writing $f$ for the pullback morphism $X_T\to T$ given by the fibre product. It is easy to show that conditions $(\star)$ are fulfilled our case of interest, which is described by the following assumptions:
+	where we abuse notation by writing $f$ for the pullback morphism $X_T\to T$ given by the fibre product. It is easy to show that conditions $(\star)$ are fulfilled in our case of interest, which is described by the following assumptions:
 	\begin{assumption}
 		For he rest of our discussion, let $X\to S$ be a smooth projective curve over $k=\bar{k}$ and let $S=\Spec(k)$ be the trivial base scheme.
 	\end{assumption}
@@ -61,7 +61,7 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 
 \section{The relative Divisor functor}\label{sec:Div_functor}
 	%
-	Let $T$ be a scheme over $S$ and denote by $X_T$ the fibered product $X\times_S T$. To start, let us introduce the notion of a relative effective Cartier divisors.
+	Let $T$ be a scheme over $S$ and let us denote by $X_T$ the fibered product $X\times_S T$. To start, let us introduce the notion of a relative effective Cartier divisors.
 	\begin{defi}
 		A \textbf{relative effective Cartier divisor} on $X_T/T$ is a closed subscheme $D\subset X_T$ such that its ideal sheaf $\calO_D\subset \OX$ is invertible and the map $\ph: D\to T$ is flat.\\
 		Associated to any such divisor we have a map to the natural numbers given by
@@ -70,11 +70,10 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 		The sum $D_1 + D_1$ is defined as the closed subscheme of $X$ corresponding to the sheaf of ideals $\calO_{D_1}\calO_{D_2}\subset \OX$.
 	\end{defi}
 	We refer to \cite[Tag 01WO]{stacks-project} for further details and for a proof of the fact that relative effective Cartier divisors are closed under the above defined sum.\\
-
 	Based on this notion we now define the contravariant functor $\DivXS$ which maps an $S$-scheme $T$ to the set of families of divisors parametrized by $T$.
 	\begin{defi}
 		We define the \textbf{relative effective Cartier divisors functor} by
-		$$ \DivXS:\Sch_S \to \Set, \quad T \mapsto \set{ \text{ Relative effective Cartier divisors} \text{ on } X_T/T }. $$
+		$$ \DivXS:\Sch_S^{op} \to \Set, \quad T \mapsto \set{ \text{ Relative effective Cartier divisors} \text{ on } X_T/T }. $$
 		and the action on morphism by sending an $S$-map $T'\overset{f}\to T$ to the pullback $(1_X\times f)^*$.\\ 
 		Moreover, for every $d\in \N$ define the subfunctors $\DivXS^d:\Sch_S \to \Set$ by restricting to divisors of degree $d$.
 	\end{defi}
@@ -103,7 +102,7 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 	\end{defi}
 	There are subtle issues involved in the definition of the relative Picard functor and one needs to be careful. A naive definition could be of the form
 	$$ T \mapsto \Pic(X_T)/\Pic(T) $$
-	but this does not give to a representable functor, as one can see it only defines a \emph{pre}sheaf with respect to both the \'etale and flat topologies. 
+	but this does not lead to a representable functor, as one can see it only defines a \emph{pre}sheaf with respect to both the \'etale and flat topologies. 
 	To solve this problem and hope for a representable Picard functor, one could define it as the sheafification of the above naive one, with respect to a reasonable Grothendieck topology on the category $\Sch_S$. Another strategy, which leads to the same result but is conceptually more transparent, is to get rid of the automorphisms of the objects -- families of line bundles -- we want to parametrize with our functor. 
 	We will adopt this latter approach, thus restricting our attention to the class of rigidified line bundles which we now introduce.
 	\begin{defi}
@@ -114,7 +113,7 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 	\begin{comment}
 		A \textbf{rigidified line bundle} on $X/T$ is a line bundle $L\to X_T$ together with a rigidification $\al: \eps_T^*L \toiso \calO_T $ along $\eps_T$, where $\eps_T:T\to X_T$ is the section of $X_T\to T$ induced by a given section $\eps:S\to X$.
 	\end{comment}
-	One can show that, under our hypothesis, any such line bundle can be written in the from $\calO(D)$ for an effective Cartier divisor $D$ on $Y/B$. Thus we define the \textbf{degree} of a rigidified line bundle $(L,\al)$ to be the degree of the corresponding divisor.\\
+	One can show that, under our hypothesis, any such line bundle can be written in the form $\calO(D)$ for an effective Cartier divisor $D$ on $Y/B$. Thus we define the \textbf{degree} of a rigidified line bundle $(L,\al)$ to be the degree of the corresponding divisor.\\
 
 	Going back to our situation $(\star)$ of a scheme $f:X\to S$ with a section $\eps:S\to X$ at our disposal, for every $T\in \Sch_S$ there is a canonical way to rigidify line bundles on $X_T/T$ along the induced section $\eps_T$ -- which by abuse of notation we will also denote by $\eps$. 
 
@@ -134,7 +133,7 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 	\end{tikzpicture}
 	\end{equation*}
 
-	In fact, given a line bundle $M$ over $X_T$, we can obtain a line bundle $(L,\al)$ with rigidification along $\eps$ by setting
+	In fact, given a line bundle $M$ over $X_T$, one can obtain a line bundle $(L,\al)$ with rigidification along $\eps$ by setting
 	$$ L:= M\otimes f^* \eps^* M^{-1} . $$
 	Indeed, recalling that by definition of section $f\circ\eps \equiv 1$, we find that
 	$$ 
@@ -154,7 +153,7 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 	We are now ready to define the relative Picard functor:
 	\begin{defi}
 		We define the \textbf{relative Picard functor} by the assignment
-		$$ \PicXS:\Sch_S \to \Ab, \qquad T \mapsto \set{ \text{Rigidified line bundles}\text{ on } X_T/T } $$
+		$$ \PicXS:\Sch_S^{{op}} \to \Ab, \qquad T \mapsto \set{ \text{Rigidified line bundles}\text{ on } X_T/T } $$
 		and the action on morphism by sending an $S$-map $T'\overset{f}\to T$ to the pullback $(1_X\times f)^*$.\\ 
 		Moreover, for every $d\in \N$, we define the subfunctors $\PicXS^d:\Sch_S \to \Set$ by restricting to line bundles of degree $d$.
 	\end{defi}
@@ -171,7 +170,7 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 	As remarked above, under our hypothesis Theorem \ref{thm:div_representable} applies, therefore $\DivXS^d$ is representable and we will denote the representing $S$-scheme by $\Dd$, which is unique up to unique isomorphism. For $\Dd$ to be the representing scheme it means that there are canonical isomorphisms
 	$$ \DivXS(T) \;\cong\; \HomS(T,\Dd), \quad \forall \;T\in \Sch_S $$
 	and a universal object $\Delta \in \DivXS(\Dd)$ with the property that to every morphism $f\in \HomS(T,\Dd)$ corresponds a unique $D\in \DivXS(T)$ given as the pullback $f^*(\Delta)$ of $\Delta$ via $f$. This is the universal property of $\Delta$. 
-	Notice that there is a bijection between the set closed points of $\Dd$ and the set of effective divisors of degree $d$ on $X$. In particular with $T=S$, for any divisor $D\in \Dd$ there is a unique canonical $S$-map $f:S\into\Dd$ such that $f^*(\Delta) = D$.\\
+	Notice that there is a bijection between the set of closed points of $\Dd$ and the set of effective divisors of degree $d$ on $X$. In particular with $T=S$, for any divisor $D\in \Dd$ there is a unique canonical $S$-map $f:S\into\Dd$ such that $f^*(\Delta) = D$.\\
 
 	The same reasoning applies to line bundles: as soon as $\PicXS^d$ is representable we get a representing $S$-scheme $\Pd$ unique up to unique isomorphism (whose points are line bundles of degree $d$ on $X/S$) and a universal line bundle $\scL \in \PicXS(\Pd)$. Notice that, under our hypothesis, the relative Picard functor $\PicXS$ is representable and identification $\eqref{eq:PicXS}$ holds.\\
 
@@ -207,7 +206,7 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 	$$ P(k_\eps)_e \; \cong \; T_e P. $$
 	Further Lemma \ref{lemm:tng_grp_sch} of Appendix A tells us that, if $P$ is a group scheme, then the tangent space at the identity element $e$ is simply given by
 	$$ T_e P \;\cong\; \ker \Big( P(k_\eps) \to P(k) \Big). $$
-	In order to describe the tangent space of $ \Pd$ it is useful to introduce the normal sheaf associated to a divisor.
+	In order to describe the tangent space of $ \Pd$ it is useful to introduce the normal sheaf associated to a divisor, by means of the following 
 	\begin{defi}
 		The \textbf{normal sheaf} associated to a divisor $D\in  \Pd$ is defined as
 		$$ \ODD := \OXD \otimes \calO_D. $$
@@ -242,7 +241,7 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 
 		Let $G_i \in H^0(U_i,\OX(-D)) $ be local equations for $D$ over an open cover $U_i$. Then an element of $V$ has local equations
 		$$ F_i = G_i + \eps H_i, \qquad H_i \in H^0(U_i,\OX) $$
-		satisfying the glueing condition $F_i = (\text{unit})\cdot F_j$ on $U_{i,j}$. Equivalently, these conditions can be expressed as
+		satisfying the glueing condition $F_i = (\text{unit})\cdot F_j$ on $U_{i,j}$. Equivalently, such conditions can be expressed as
 		$$ G_i + \eps H_i = (a_{i,j} + \eps b_{i,j})\cdot (G_j + \eps H_j) $$
 		for some $b_{i,j} \in H^0(U_{i,j},\OX)$ and $ a_{i,j} \in H^0(U_{i,j},\OX^*)$, which implies that
 		$$ G_i = a_{i,j} G_j \AND H_i = a_{i,j} H_j + b_{i,j}G_j. $$
@@ -250,13 +249,13 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 		$$ \frac{H_i}{G_i}-\frac{H_j}{G_j} = b_{i,j}\cdot a_{j,i} $$
 		ensures that $\{H_i/G_i \} $ glues to a global section of $\ODD$. It is easy to check that this gives a bijections of vector spaces.
 	\end{proof}
-	Let us now turn to the tangent space of the Picard scheme, which actually admits a simpler description.
+	We now turn to the tangent space of the Picard scheme, which actually admits a simpler description.
 	\begin{prop}\label{prop:tgn_pic}
 		Let $L$ be a closed point of $ \Pd$ and assume conditions $(\star)$ of Section \ref{sec:assumptions} are met. Then we have an isomorphism of vector spaces
 		$$ T_L \Pd \cong H^1(\calO_X). $$
 	\end{prop}
 	\begin{proof}
-		First of all notice that $\Pic = \sqcup_{d\in \N}\Pd$ is a group scheme, so the tangent space at every point $L$ is canonically isomorphic to the tangent space at the identity element $ 0\in \Pic^0_X = \PicXS^0(k)$.
+		First of all notice that $\Pic = \sqcup_{d\in \N}\Pd$ is a group scheme, therefore the tangent space at every point $L$ is canonically isomorphic to the tangent space at the identity element $ 0\in \Pic^0_X = \PicXS^0(k)$.
 		Hence, from Lemma \ref{lemm:tng_grp_sch} of Appendix A we know what we are looking for: the kernel of the map $ \PicXS(k_\eps)\to  \PicXS(k)$. In order to compute it, consider the truncated exponential sequence
 		$$ \SES{\OX}{\calO_{X_\eps}^*}{\OX^*}, $$
 		where the first map is the exponentiation $e: f\mapsto 1+\eps f$. Notice that this map enjoys the key property of the classical exponential, as we have 
@@ -265,7 +264,7 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 		$$ \SES{H^1(\OX)}{H^1(\calO_{X_\eps}^*)}{H^1(\OX^*)}. $$
 		Now, the fact that conditions $(\star)$ are satisfied implies that the natural identification \eqref{eq:PicXS} holds, thus giving isomorphisms
 		$$ \PicXS(k) \cong \Pic(X) = H^1(\OX^*) \AND \PicXS(k) \cong \Pic(X_\eps) = H^1(\calO_{X_\eps}^*)\,. $$
-		Therefore we can write down the following commutative diagram with exact rows, where the two vertical arrows on the right are isomorphisms and thus the same holds for the induced vertical map between the kernels.
+		Therefore we have the following commutative diagram with exact rows, where the two vertical arrows on the right are isomorphisms and thus the same holds for the induced vertical map between the kernels.
 		$$
 		\begin{tikzpicture}[node distance=4em, auto]
 			\node (O) 															{$0$};
@@ -317,7 +316,7 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 	$$ \HDD, \text{ vector space } \qquad \large\mapsto \qquad \pi_* \calO_Z(\Delta)_{\mid \Delta}, \text{ locally free sheaf }$$
 	
 	\begin{prop}
-		There is a canonical isomorphim of sheaves $T\Dd \cong \pi_* \calO_Z(\Delta)_{\mid \Delta}$.
+		There is a canonical isomorphism of sheaves $T\Dd \cong \pi_* \calO_Z(\Delta)_{\mid \Delta}$.
 	\end{prop}
 	\begin{proof}
 		Let $\tilde{\pi}$ denote the restriction of $\pi:X\times\Dd\to \Dd$ to the divisor $\Delta$ and look at the diagram of the closed immersion
@@ -342,14 +341,14 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 		$$ T(X\times \Dd) \tolong \calO_Z(\Delta)_{\mid_\Delta} $$
 		which, in light of the above identifications, gives a map from $\pi^*T\Dd $ to $ \calO_Z(\Delta)_{\mid_\Delta}$ obtained by restriction. Therefore by the adjunction between $\pi_*$ and $\pi^*$ we find what we were looking for: a morphism		
 		$$ T\Dd \tolong \pi_* \calO_Z(\Delta)_{\mid_\Delta}. $$
-		As remarked in Remark \ref{rema:smoothness}, the two sheaves in question are locally free of finite rank, therefore it is enough to show that the above global map induces isomorphisms on each fibre. One can check that, in fact, this global morphisms restricts on every fibre to the linear map
+		As remarked in Remark \ref{rema:smoothness}, the two sheaves in question are locally free of finite rank, therefore it is sufficient to show that the above global map induces isomorphisms on each fibre. One can check that, in fact, this global morphisms restricts on every fibre to the linear map
 		$$ T_D \Dd \toiso \HDD $$
 		which we proved to be an isomorphism in Proposition \ref{prop:tgn_div}, thus achieving the desired conclusion.
 	\end{proof}
-	Let us now turn to the case of the Picard scheme, in which our strategy is in some sense to make the formal replacement
+	We now turn to the case of the Picard scheme, in which our strategy is in some sense to make the formal replacement
 	$$ H^1(\OX), \text{ vector space } \qquad \large\mapsto \qquad R^1 \pi_* \calO, \text{ locally free sheaf }$$
 	\begin{prop}
-		There is a canonical isomorphim of sheaves $u^* T\Pd \cong R^1 \pi_* \calO_Z$.
+		There is a canonical isomorphism of sheaves $u^* T\Pd \cong R^1 \pi_* \calO_Z$.
 	\end{prop}
 	\begin{proof}
 		First of all recall from Proposition \ref{prop:tgn_pic} that we have an isomorphism
@@ -376,7 +375,7 @@ appearing in the cohomology sequence can be identified with the tangent morphism
  	\end{proof}
 
 \section{Cohomological description of the Abel-Jacobi map}
-	In this section we will achieve a purely cohomological description for the tangent map $Tu$ of the Abel-Jacobi map, first fiberwise and then globally.
+	In this section we will achieve a purely cohomological description of the tangent map $Tu$ of the Abel-Jacobi map, first fiberwise and then globally.
 	\subsection{Fiberwise description}
 		In section \ref{sec:tgnt_spaces} we showed that, on every closed point $D$, the tangent morphism $\TDu$ is a linear map $\HDD\to H^1(\OX)$, which looks pretty familiar. Indeed from the natural \ses	of sheaves of Remark \ref{rema:div_ses}, i.e.
 		$$ \SES{\OX}{\OXD}{\ODD} $$
@@ -448,8 +447,8 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 		\end{equation}	
 		from which we make the following observations:
 		\begin{enumerate}[i)]
-			\item The dimension of the Picard scheme is bounded by $h^1(\OX)$ and equality holds \ABiff $ \Pd$ is smooth, at any point and hence everywhere. In the case of $X$ being a smooth curve of genus $g$ recall that we have $h^1(\OX)=h^0(K)=g$.
-			\item The kernel of $\TDu$ is $H^0(D)/k \cong \PP H^0(D)$, so one sees that $u$ is constant on linear series. This is the content of Abel's theorem.
+			\item The dimension of the Picard scheme is bounded by $h^1(\OX)$ and equality holds \ABiff $ \Pd$ is smooth, at any point and hence everywhere. In the case of $X$ being a smooth curve of genus $g$, recall that by definition $h^1(\OX)=h^0(K)=g$;
+			\item The kernel of $\TDu$ is $H^0(D)/k \cong \PP H^0(D)$, so one notices that $u$ is constant on linear series. This is the content of Abel's theorem.
 		\end{enumerate}
 
 	\subsection{Global description}
@@ -460,7 +459,7 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 		Moreover, we will show that the last part of these sequences are free presentations, a fact that will be of crucial importance for the definition of the moduli varieties parametrising linear series and, in general, for the rest of our discussion.\\
 
 		\begin{defi}\label{def:Gamma}
-			Pick a divisor $M = \sum_{i=1}^m P_i$ consisting of $m > 2g-d-1$ distinct points of $X$, then pull it back via the natural projection $\nu$, to define the product divisor $$\Gamma := \nu^* M = M\times \Pd$$
+			Choose a divisor $M = \sum_{i=1}^m P_i$ consisting of $m > 2g-d-1$ distinct points of $X$, then pull it back via the natural projection $\nu$, to define the product divisor $$\Gamma := \nu^* M = M\times \Pd$$
 		\end{defi}	
 
 

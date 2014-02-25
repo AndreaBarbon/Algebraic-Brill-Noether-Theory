@@ -16,14 +16,14 @@
 
 %: ----------------------- contents from here ------------------------
 
-In this Chapter we give the statement and a proof of the \RR Theorem. As we will see, the \emph{cheap} version of the result can be easily obtained, while the complete statement heavily relies on the Serre Duality Theorem which we prove in Section \ref{sec:Serre_duality} following the original work of Serre.\\ 
+In this Chapter we give the statement and a proof of the \RR Theorem. As we will see, the \emph{cheap} version of the result can be easily obtained, while the complete statement heavily relies on the Serre Duality Theorem, which we prove in Section \ref{sec:Serre_duality} following the original work of Serre.\\ 
 Further, in Section \ref{sec:alpha_delta} we give a motivation for the fact that the restriction map 
 $$ \al:H^0(K)\to H^0(K\otimes \OD) $$ 
 is, with respect to the Serre duality pairing, dual to the cohomological coboundary map 
 $$\delta:H^0(D)_D\to H^1(\OX).$$
 
 \section{Cheap Riemann-Roch}
-	In this section we will state and prove the \emph{cheap version} of the fundamental \RR theorem. We will be able to prove the complete version of the theorem at the end of this Appendix, exploiting Serre duality.
+	In this section we state and prove the \emph{cheap version} of the fundamental \RR theorem. We will be able to prove the complete version of the theorem at the end of this Appendix, exploiting Serre duality.
 	\begin{namedtheo}[Cheap \RR Theorem]\label{thm:cheap_RR}
 		Let $X$ be a complete curve of genus $g$, $K$ a canonical divisor and $D\in \Dd$. Then
 		$$ h^0(D) - h^1(D) = \deg(D)-g+1. $$
@@ -48,7 +48,7 @@ $$\delta:H^0(D)_D\to H^1(\OX).$$
 
 \section{Serre Duality Theorem}\label{sec:Serre_duality}
 
-	This Section is based on the first chapter of the wonderful book \emph{Algebraic Groups and Class Fields} written by Serre, which appears as entry number \cite{SERRE} in our Bibliograpy.\\
+	This Section is based on the first chapter of the wonderful book \emph{Algebraic Groups and Class Fields} written by Serre, which appears as entry number \cite{SERRE} in our Bibliography.\\
 
 	Even though Serre duality for curves can be derived as a consequence of Grothendieck's duality Theorem (see for instance Theorem III.7.6 of \cite{HAG}), we will give a more direct proof for the case of curves, inspired by the classical proof used by Weil. A crucial ingredient is the the ring of repartitions, which we now introduce.
 	\begin{defi}
@@ -166,7 +166,7 @@ $$\delta:H^0(D)_D\to H^1(\OX).$$
 
 \section{Duality between $\al$ and $\delta$}\label{sec:alpha_delta}
 
-	The aim of this section is to show that, for every divisor $D\in X_d$, the maps
+	The objective of this section is to show that, for every divisor $D\in X_d$, the maps
 	$$ \delta:H^0(D_D)\to H^1(\OX) \AND \al:H^0(J)\to H^0(K_D) $$
 	are dual to each other.
 	To start, consider the \ses of invertible sheaves 
@@ -182,7 +182,7 @@ $$\delta:H^0(D)_D\to H^1(\OX).$$
 	Serre duality ensures that the four outer terms of the dual sequence
 	$$ 0\to H^1(K)^{\vee} \to H^1(D')^{\vee} \to H^0(K_D)^{\vee} \overset{\al^{\vee}}\longrightarrow H^0(K)^{\vee} \to H^0(D')^{\vee} \to 0. $$
 	are isomorphic the the corresponding terms of $\ref{eq:les1}$. Hence, exploiting to the functoriality of the duality pairings $\theta$, we get a commutative diagram
-	$$
+	\begin{equation}\label{eq:diagram}
 		\begin{tikzpicture}[node distance=6.5em, auto]
 			\node 					(01) 																{$0$};
 			\node 					(A) 	[right of=01, xshift=-3em]		{$H^0(\OX)$};
@@ -220,7 +220,7 @@ $$\delta:H^0(D)_D\to H^1(\OX).$$
 		  \draw[-stealth]	(D)							to node {$\theta$} 	(D');
 		  \draw[-stealth]	(E)							to node {$\theta$} 		(E');
 		\end{tikzpicture}
-	$$
+	\end{equation}
 	and invoking the Five Lemma we obtain the dashed isomorphism $\vartheta$, which we use to define the perfect pairing
 	$$ \pairing : H^0(D_D)\otimes H^0(K_D) \to k $$
 	so that the desired duality between $\al$ and $\delta$ is a consequence of the commutativity of the above diagram. In other words for every $ v\in H^0(D_D)$ and $\w\in H^0(K_D)$ we have the formula
@@ -228,18 +228,14 @@ $$\delta:H^0(D)_D\to H^1(\OX).$$
 		\pair{\delta v}{\w} = \pair{v}{\al \w}
 	\end{equation}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	% ---------------------------------------------------------------------------
-	% ----------------------- end of thesis sub-document ------------------------
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.9\textwidth]{Dual_Circle.pdf}
+		\caption{ A more \emph{artistic} representation of the duality involved in diagram \eqref{eq:diagram} }
+		\label{fig:Dual_Circle}
+		\vspace{2em}
+	\end{figure}
+
 
 \section{Riemann-Roch Theorem}
 	Using Serre duality we immediately get the final version of the theorem.
@@ -252,3 +248,14 @@ $$\delta:H^0(D)_D\to H^1(\OX).$$
 	Notice that, plugging-in the canonical class $K$ in the \RR formula and recalling that by definition $h^0(K) = g$, we get
 	$$ \deg(K) = 2g-2 $$
 	which, since $K$ is the dual of the tangent bundle, is an analogue of the Hopf index theorem for Riemann surfaces.
+	
+	
+	
+	
+	
+	
+	
+	% ---------------------------------------------------------------------------
+	% ----------------------- end of thesis sub-document ------------------------
+
+
