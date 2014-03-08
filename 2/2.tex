@@ -37,9 +37,9 @@ This cohomological point of view leads to a description of the \AJJ map by means
 $$ \delta_D : H^0(D)_D \tolong H^1(\OX) $$
 appearing in the long cohomology sequence of $\OXD$, from which one realises that the study of linear series is deeply related to the sheaf-cohomology of the curve.\\
 Finally, building on the above idea, we will achieve a global cohomological description of the tangent sheaves $T\EDiv_X$ and $T\Pic_X$ --
-this is where the universal objects start to reveal their crucial role. In fact, the formal replacement of $D$ by the universal divisor $\Delta$ allows to produce a long cohomology sequence containing the locally-free sheaves $\pi_* \calO_{\Delta}(\Delta)$ and $R^1 \pi_* \calO$, which we will show to be isomorphic to the tangent sheaves of $\EDiv_X$ and $\Pic_X$, respectively. 
+this is where the universal objects start to reveal their crucial role. In fact, the formal replacement of $D$ by the universal divisor $\Delta$ allows to produce a long cohomology sequence containing the locally-free sheaves $\pi_* \calO_{\Delta}(\Delta)$ and $R^1 \pi_* \calO_Z$, which we will show to be isomorphic to the tangent sheaves of $\EDiv_X$ and $\Pic_X$, respectively. 
 Moreover, the \emph{global} coboundary morphism 
-$$ \delta: \pi_* \calO_{\Delta}(\Delta) \tolong R^1 \pi_* \calO $$
+$$ \delta: \pi_* \calO_{\Delta}(\Delta) \tolong R^1 \pi_* \calO_Z$$
 appearing in the cohomology sequence can be identified with the tangent morphism of sheaves $Tu$, thus giving a global cohomological way to describe the degeneracy loci of the \AJJ map which will be exploited in the next Chapter. 
 
 \section{Working assumptions}\label{sec:assumptions}
@@ -55,7 +55,7 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 	$$
 	where we abuse notation by writing $f$ for the pullback morphism $X_T\to T$ given by the fibre product. It is easy to show that conditions $(\star)$ are fulfilled in our case of interest, which is described by the following assumptions:
 	\begin{assumption}
-		For he rest of our discussion, let $X\to S$ be a smooth projective curve over $k=\bar{k}$ and let $S=\Spec(k)$ be the trivial base scheme.
+		For the rest of our discussion, let $X\to S$ be a smooth projective curve of genus $g$ over an algebraically closed field $k=\bar{k}$ and let $S=\Spec(k)$ be the trivial base scheme.
 	\end{assumption}
 
 
@@ -304,19 +304,19 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 	\end{notation}
 
 	\begin{defi}
-		A \textbf{locally free sheaf} of rank $n$ on a scheme $Y$ is defined as an $\calO_Y$-module $\scr{F}$ that is locally a free sheaf of rank $n$. More precisely, there is an open cover $\{U_i\}$ of $Y$ such that over each $U_i$ we have an isomorphism $\scr{F}_{\mid U_i} \cong \calO_{U_i}^{\otimes n}$.
+		A \textbf{locally free sheaf} of rank $n$ on a scheme $Y$ is defined as an $\calO_Y$-module $\scr{F}$ that is locally a free sheaf of rank $n$. More precisely, there is an open cover $\{U_i\}$ of $Y$ such that over each $U_i$ we have an isomorphism $\scr{F}_{\mid U_i} \cong \calO_{U_i}^{\oplus n}$.
 	\end{defi}
 
 	\begin{rema}\label{rema:smoothness}
 		It is a well known fact that, in our case of a smooth projective curve over an algebraically closed field, the representing schemes $\Dd$ and $\Pd$ are in fact smooth varieties in any characteristic. We do not prove these facts here but we refer to the literature -- see for instance the discussion in Chapter 5 of $\cite{PICARD}$. Therefore it follows that the tangent sheaves $T\Dd$ and $T\Pd$ are locally-free.\\
-		Moreover, we remark that the quasi-coherent sheaves $\pi_* \calO_Z(\Delta)_{\mid_\Delta}$ and $R^1\pi_*\calO_Z$ are locally-free, as will show in Proposition \ref{prop:free_pres}.\\
+		Moreover, we remark that the quasi-coherent sheaves $\pi_* \calO_{\Delta}(\Delta)$ and $R^1\pi_*\calO_Z$ are locally-free, as will show in Proposition \ref{prop:free_pres}.\\
 	\end{rema}
 
 	Starting from the tangent sheaf of the Divisor scheme, our strategy is to pass from a single divisor $D$ to the universal divisor $\Delta$, making the formal replacement 
-	$$ \HDD, \text{ vector space } \qquad \large\mapsto \qquad \pi_* \calO_Z(\Delta)_{\mid \Delta}, \text{ locally free sheaf }$$
+	$$ \HDD, \text{ vector space } \qquad \large\mapsto \qquad \pi_* \calO_{\Delta}(\Delta), \text{ locally free sheaf }$$
 	
 	\begin{prop}
-		There is a canonical isomorphism of sheaves $T\Dd \cong \pi_* \calO_Z(\Delta)_{\mid \Delta}$.
+		There is a canonical isomorphism of sheaves $T\Dd \cong \pi_* \calO_{\Delta}(\Delta)$.
 	\end{prop}
 	\begin{proof}
 		Let $\tilde{\pi}$ denote the restriction of $\pi:X\times\Dd\to \Dd$ to the divisor $\Delta$ and look at the diagram of the closed immersion
@@ -337,16 +337,16 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 		\AND 
 		T (X\times\Dd)_{\mid_\Delta} = (\pi^* T\Dd)_{\mid_\Delta} \oplus (\operatorname{Pr}^*_X TX)_{\mid_\Delta} .
 		$$
-		Moreover, since $\calO_Z(\Delta)_{\mid_\Delta}$ is the normal bundle of the divisor $\Delta$, there is a natural map
-		$$ T(X\times \Dd) \tolong \calO_Z(\Delta)_{\mid_\Delta} $$
-		which, in light of the above identifications, gives a map from $\pi^*T\Dd $ to $ \calO_Z(\Delta)_{\mid_\Delta}$ obtained by restriction. Therefore by the adjunction between $\pi_*$ and $\pi^*$ we find what we were looking for: a morphism		
-		$$ T\Dd \tolong \pi_* \calO_Z(\Delta)_{\mid_\Delta}. $$
+		Moreover, since $\calO_{\Delta}(\Delta)$ is the normal bundle of the divisor $\Delta$, there is a natural map
+		$$ T(X\times \Dd) \tolong \calO_{\Delta}(\Delta) $$
+		which, in light of the above identifications, gives a map from $\pi^*T\Dd $ to $ \calO_{\Delta}(\Delta)$ obtained by restriction. Therefore by the adjunction between $\pi_*$ and $\pi^*$ we find what we were looking for: a morphism		
+		$$ T\Dd \tolong \pi_* \calO_{\Delta}(\Delta). $$
 		As remarked in Remark \ref{rema:smoothness}, the two sheaves in question are locally free of finite rank, therefore it is sufficient to show that the above global map induces isomorphisms on each fibre. One can check that, in fact, this global morphisms restricts on every fibre to the linear map
 		$$ T_D \Dd \toiso \HDD $$
 		which we proved to be an isomorphism in Proposition \ref{prop:tgn_div}, thus achieving the desired conclusion.
 	\end{proof}
 	We now turn to the case of the Picard scheme, in which our strategy is in some sense to make the formal replacement
-	$$ H^1(\OX), \text{ vector space } \qquad \large\mapsto \qquad R^1 \pi_* \calO, \text{ locally free sheaf }$$
+	$$ H^1(\OX), \text{ vector space } \qquad \large\mapsto \qquad R^1 \pi_* \calO_Z, \text{ locally free sheaf }$$
 	\begin{prop}
 		There is a canonical isomorphism of sheaves $u^* T\Pd \cong R^1 \pi_* \calO_Z$.
 	\end{prop}
@@ -459,14 +459,15 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 		Moreover, we will show that the last part of these sequences are free presentations, a fact that will be of crucial importance for the definition of the moduli varieties parametrising linear series and, in general, for the rest of our discussion.\\
 
 		\begin{defi}\label{def:Gamma}
-			Choose a divisor $M = \sum_{i=1}^m P_i$ consisting of $m > 2g-d-1$ distinct points of $X$, then pull it back via the natural projection $\nu$, to define the product divisor $$\Gamma := \nu^* M = M\times \Pd$$
+			Choose a divisor $M = \sum_{i=1}^m P_i$ consisting of $m \geq 2g-d-1$ distinct points of $X$, then define the product divisor 
+			$$\Gamma := M\times \Pd$$
 		\end{defi}	
 
 
 		\begin{prop}\label{prop:free_pres}
 			Let $\pi : X\times \Dd \to \Dd$ and $\nu : X\times \Pd \to \Pd$ denote the natural projections on the second factor. Then the exact sequence of sheaves
 			\begin{equation}\label{eq:univ_div_seq}
-				\pi_* \calO_{\Delta}(\Delta)\overset{\delta}\to R^1 \pi_* \calO \to R^1 \pi_* \calO_Z(\Delta) \to 0
+				\pi_* \calO_{\Delta}(\Delta)\overset{\delta}\to R^1 \pi_* \calO_Z \to R^1 \pi_* \calO_Z(\Delta) \to 0
 			\end{equation}
 			is a free presentation of $R^1 \pi_* \calO_Z(\Delta)$, while the exact sequence of sheaves
 			\begin{equation}\label{eq:univ_lb_seq}
@@ -477,15 +478,15 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 		\begin{proof}
 			We start by looking at the natural \ses
 			\begin{equation}\label{eq:univ_div_ses}
-				\SES{\calO}{\calO_Z(\Delta)}{\calO_\Delta(\Delta)} 
+				\SES{\calO_Z}{\calO_Z(\Delta)}{\calO_\Delta(\Delta)} 
 			\end{equation}
 			associated to the universal divisor, which is in some sense the global analogue of the second sequence appearing in Remark \ref{rema:div_ses}. Since $D$ is $0$-dimensional and $h^1(D_D)= 0$, Proposition \ref{prop:no_jumps} of Appendix A implies that $R^1 \pi_* \calO_{\Delta}(\Delta) = 0$, therefore the last part of the direct image sequence of \ref{eq:univ_div_ses} is given by
 			$$
-				\pi_* \calO_{\Delta}(\Delta)\overset{\delta}\to R^1 \pi_* \calO \to R^1 \pi_* \calO_Z(\Delta) \to 0.
+				\pi_* \calO_{\Delta}(\Delta)\overset{\delta}\to R^1 \pi_* \calO_Z \to R^1 \pi_* \calO_Z(\Delta) \to 0.
 			$$
 			As we showed in Section \ref{sec:tgnt_spaces}, for every $D\in \Dd$ the cohomology groups
 			$$ H^0(X, D_D) \cong T_D \Dd \AND H^1(X, \OX) \cong T_{\OXD} \Pd $$
-			are fiberwise vector spaces of dimensions $d$ and $g$. Hence Proposition \ref{prop:no_jumps} implies that $\pi_* \calO_{\Delta}(\Delta)$ is locally free of rank $d$ and that $R^1 \pi_* \calO$ is locally free of rank $g$, thus showing that \eqref{eq:univ_div_seq} is in fact a \textbf{free} presentation.
+			are fiberwise vector spaces of dimensions $d$ and $g$. Hence Proposition \ref{prop:no_jumps} implies that $\pi_* \calO_{\Delta}(\Delta)$ is locally free of rank $d$ and that $R^1 \pi_* \calO_Z$ is locally free of rank $g$, thus showing that \eqref{eq:univ_div_seq} is in fact a \textbf{free} presentation.
 			\\
 			Moving towards the second sequence, notice that we have the natural \ses 
 			\begin{equation}\label{eq:univ_lb_ses}
@@ -519,7 +520,7 @@ appearing in the cohomology sequence can be identified with the tangent morphism
 			%node (A2) 	[right of=A]		{$\;$};
 			\node (B) 	[right of=A]		{$\pi_* \calO_\Delta(\Delta)$};
 			%node (B2) 	[right of=B]		{$\;$};
-		  \node (C) 	[right of=B] 	{$R^1 \pi_* \calO$};
+		  \node (C) 	[right of=B] 	{$R^1 \pi_* \calO_Z$};
 			%\node (C2) 	[right of=C] 		{$\;$};
 		  \node (D) 	[right of=C] 	{$R^1 \pi_* \calO_Z(\Delta)$};
 			%\node (OO) 	[right of=D] 		{$0$};
